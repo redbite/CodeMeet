@@ -1,0 +1,71 @@
+<!--
+<?php
+
+    // Avvia la sessione
+    session_start();
+    // Verifica se l'utente è loggato
+    if(!isset($_SESSION['username']))
+    {
+        // Vai alla login
+        header("Location: login.php");
+        exit;
+    }
+
+?>
+-->
+<html>
+    <head>
+        <title>CodeMeet | Home</title>
+        <link rel="icon" href="pc1.png">
+        <link rel='stylesheet' href='home.css'/>
+       <script src='home.js' defer></script>
+    </head>
+    <body>
+        <div id="nav">
+            <div id="banner">
+                <div id="navflex">
+                    <p><img id="banner" src="3logo3.png" /></p>
+                </div>
+            </div>
+        <div id="flex-cont-nav">
+            <div id="navflex">
+            <!--<p><a href='ranking.html'>DEVS</a></p>
+            <p><a> | </a></p> --> 
+            <p><a href='create.html'>CREATE A TICKET</a></p>
+            <p><a> | </a></p> 
+            <p><a a class="here" href='home.html'>HOMEPAGE</a></p>
+            <p><a> | </a></p> 
+            <p><a href='index.html'>ABOUT</a></p>
+            </div>
+        
+        </div>
+    </div>
+        
+        <section id="album_view">
+            <div id="stampa_tutti"></div>
+            <form name='form'>
+                <div>
+                    <!--HERE GOES THE POST_SOLUTION AND POST_SOLVED_BY FORM VALUES -->
+                </div>
+            </form>
+        </section>
+            
+        <section id="modal_view" class="hidden">
+
+            
+
+            <form name='form_modal' method='get' class="hidden">
+                <p> <label>Solved by <input id = "fix_it" type='text' maxlenght="25" name='post_solved_by' value=''></label> </p>
+            <p> <label> <textarea id = "fix_it2" maxlenght="100" type='text' name='post_solution' value=''></textarea></label> </p>
+            <p> <div id="submit"><label>&nbsp;<input id="submit_buttn" type='submit'></label></div> </p>
+            </form>
+        </section>
+        
+
+    <footer>
+      <div>
+        CODEMEET By Alessio Leone</div>     
+    </footer>
+    -->
+    </body>
+</html>

@@ -1,0 +1,335 @@
+body{
+    --background-image: url('./bgMblur2.png');
+    background-color: rgba(103, 235, 162, 0.925);
+
+    background-size:cover;
+    background-attachment: fixed;
+    z-index:0;
+    height:100%;
+    margin:0;
+    padding:0px;
+    font-family: "Segoe UI";
+}
+
+p {
+    margin: 0.3em;
+    
+  }
+/*BARRA UTENTE*/
+h1{
+    background-color: #4a4a4bad;
+    border: 1px solid black;
+    border-radius: 5px 20px 5px;
+    padding:5px;
+    font-size: 8px;
+    text-align: center;
+    color: #4d4d4da1;
+    margin: 5px 0px;
+}
+/*
+#profile_pic{
+    border: 3px solid rgb(46, 44, 44);
+    width:100px;
+    border-radius: 5px 20px 5px;
+    border: aquamarine;
+}
+
+#profile-box{
+    display:flex;
+    //flex-direction:column;
+    justify-content:start;
+    margin-left:15px;
+    //margin: 0px 0px 0px 20px;
+}*/
+
+ #flex-cont-nav{
+    --display: flex;
+    --margin-top: 0px;
+    --margin-left:0px;
+    --margin-right:0px;
+    --justify-content: center;
+    --justify-content: space-around;
+    --align-items: center;
+    --background-color: #242322;
+    --background-color: rgba(0, 0, 0, 0.678);
+}
+
+#navflex{
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+}
+
+#nav{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background-color: rgb(0, 0, 0);
+}
+
+#banner{
+    width:40%;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;   
+  border-bottom:1px solid greenyellow;
+}
+
+
+a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 25px 7px;
+    font-weight:bold;
+    font-size: 24px;
+    margin:12px 15px;
+}
+
+a:hover{
+    font-weight: bold;
+    color:greenyellow;
+    text-decoration:double;
+}
+
+.here{
+    color:rgba(170, 214, 104, 0.753);
+    text-decoration:underline;
+    font-weight: bold;
+
+
+}
+
+/*
+#pic_url, .pic_url{
+    width: 40px;
+    height:40px;
+    border: 2px black;
+    border-radius:20%;
+}
+
+#user_name{
+    color:rgb(211, 255, 240)
+}
+*/
+
+.hidden{
+    display:none;
+}
+
+
+/* ALBUM VIEW */
+
+#album_view{
+    z-index:0;
+}
+
+#stampa_tutti{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin:25px 10px;
+    padding-bottom:20px;
+}
+
+.post,.post_O{  /* POST FROM HOME.JS LINE 22 - 23*/
+    /* BOX DIMENSIONS */
+    max-width:33vw;
+    max-height:700px;
+    width:27vw;
+    min-height:150px;
+    
+    display:flex;
+    flex-direction:column;
+    flex-wrap:1;
+    padding:8px;
+    background-color:rgb(27, 27, 26);
+    border:2px solid black;
+    border-radius: 5px 20px 5px;
+    margin:20px;
+    overflow:hidden;
+    /*overflow-x: scroll; /*for text format*/
+    background-image: url('./note.jpg');
+    background-size:cover;
+}
+
+.post_O{  
+    border:4px double red;
+    border-radius: 5px 20px 5px;
+}
+.post{
+    border:2px double yellowgreen;
+    border-radius: 5px 20px 5px;
+}
+
+.post_user_submitted_by,.post_data_published,.post_data_solved,.post_user_solved_by{
+    font-size : 17px;
+    font-weight:100;
+    color:rgba(255, 255, 255,0.7);
+    padding:3px;
+}
+
+.post_titolo{
+    font-size: 20px;
+    font-weight: bold;
+    color:orange;
+}
+
+.post_id_note{ /* ? */
+    display:none;
+}
+
+.post_text{
+    font-size:15px;
+    color:whitesmoke;
+    word-break: break-all;
+}
+
+.post_opened,.post_solved{
+    font-size:20;
+    font-style: oblique;
+    font-weight: bold;
+    color:red;
+}
+.post_solved{
+    color:yellowgreen;
+}
+
+
+.box2{
+    justify-content:space-around;
+}
+
+.box1,.box2,.box3,.box4{
+    display:flex;
+    flex-direction: row;
+}
+
+
+.box1{
+    padding:0px 0px 10px 0px;
+}
+
+.box2{
+    padding:0px 0px 7px 0px;
+}
+
+.box3{
+    padding:0px 0px 15px 0px;
+}
+
+.box4{
+    justify-content:flex-end;
+}
+
+.post_priority{
+    color : rgb(212, 157, 126);
+    border-bottom:1px solid #e5ff0082;
+    --border-style: dotted;
+    margin-left: 10px;
+    margin-right:3px;
+}
+
+
+
+footer{
+    background-color: black;
+    margin:0px;
+    --padding:10px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    position: fixed;
+    bottom: 0;
+    width:100%;
+}
+
+footer div{
+    margin-top:30px;
+    margin-bottom:10px;
+    color:rgba(153, 205, 50, 0.877);
+    font-weight:bold;
+    font-size:20px;
+    --position: absolute; -- causa sovrapposizione 
+}
+
+footer p{
+    color: white;
+    font-size: 15 px;
+    margin-top: 15px;
+    margin-bottom:1px;
+}
+
+/*aggiusta il box solution*/
+.post_user_solved_by{
+    font-weight:normal;
+    color:white;
+    margin:0px 15px;
+}
+.post_data_solved,.post_data_published{
+    font-size:0.9em;
+}
+.post_solution{
+    color:#d9f4b0;
+    font-size:0.9em;
+    border-bottom:1px solid greenyellow;
+    /*text-align: center; in the box45*/ 
+}
+.box5{ /*solve button*/
+    margin : 10px;
+    color:red;
+}
+.box45{
+    text-align: center;
+}
+
+#album_view{
+    z-index: 0;
+}
+
+.no_scroll{ /*for modal*/
+    overflow:hidden;
+}
+
+#modal_view{
+    
+    position:absolute;
+    height:100vh;
+    width:100vw;
+    background-image: url('./create2.png');
+    background-size:cover;
+    /*background-color:#000000d8;*/
+    z-index: 2;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+}
+
+#modal_view.hidden{
+    display:none;
+}
+.modal_box{
+    margin-top:25vh;
+    min-height:50vh;
+    width:50vw;
+    flex-wrap:1;
+    flex-direction:column;
+    color:white;
+    --margin-top : 20vh;
+}
+
+#fix_it2{ /*modalview textarea*/
+    min-width:680px;
+    min-height : 150px;
+}
+
+.modal_box h4{
+    margin-bottom:25px;
+    color: rgb(91, 224, 113);
+    font-size:1.2em;
+}
+
+div #submit_buttn{
+    display:block;
+    //center the submit button
+}

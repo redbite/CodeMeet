@@ -1,0 +1,116 @@
+<!--
+<?php
+
+    // Avvia la sessione
+    session_start();
+    // Verifica l'accesso
+    if(isset($_SESSION["username"]))
+    {
+        // Vai alla home
+        header("Location: home.php");
+        exit;
+    }
+    // Verifica l'esistenza di dati POST
+    if(isset($_POST["username"]) && isset($_POST["password"]))
+    {
+        // Connetti al database
+        $conn = mysqli_connect("localhost", "root", "", "testx"); 
+        // Escape dell'input
+        $username = mysqli_real_escape_string($conn, $_POST["username"]);
+        $password = mysqli_real_escape_string($conn, $_POST["password"]);
+       
+        // Cerca utenti con quelle credenziali
+        $query = "SELECT username, pic_url FROM users WHERE username = '".$username."' AND password = '".$password."' ";
+        $res = mysqli_query($conn, $query); 
+        
+        if(mysqli_num_rows($res) > 0) {
+            $row = mysqli_fetch_assoc($res); 
+            $_SESSION["username"] = $row["username"]; 
+            $_SESSION["pic_url"] = $row["pic_url"];  
+            header("Location: home.php");
+            exit;
+          }
+        /*// Verifica la correttezza delle credenziali
+        if(mysqli_num_rows($res) > 0)
+        //if($res > 0)
+        {
+            // Imposta la variabile di sessione
+            $_SESSION["username"] = $_POST["username"];
+            $_SESSION["pic_url"] = $_POST["pic_url"]; //signup
+            // Vai alla pagina home_db.php
+            header("Location: home.php");
+            exit;
+        }*/
+        else
+        {
+            // Flag di errore
+            $errore = true;
+        }
+    }
+?>
+-->
+
+<html>
+    <head>
+        <title>CodeMeet | About</title>
+        <link rel="icon" href="pc1.png">
+        <link rel='stylesheet' href='sign_up.css'>
+        <link rel='stylesheet' href='home.css'>
+        <!--<script src='login.js' defer></script>-->
+    </head>
+    <body>
+        <div id="nav">
+            <div id="banner">
+                <div id="navflex">
+                    <a href='home.html'><p><img id="banner" src="3logo3.png" /></p></a>
+                </div>
+            </div>
+            <!--
+        <div id="flex-cont-nav">
+            
+            <p><a href='create.html'>CREATE A TICKET</a></p>
+            <p><a> | </a></p> 
+            <p><a href='home.html'>HOMEPAGE</a></p>
+            <p><a> | </a></p> 
+            <p><a class="here" href='index.html'>ABOUT</a></p>
+            </div>
+        </div>
+        -->
+    </div>
+    <div id="column">
+        <div class="divleft"><!--<p>-->
+            <a href='home.html'><img src="logo0b.png" class="center"><br>Go to the homepage</a>
+            
+            
+            
+        <!--</p>--></div>
+        <div class="divright">   
+            <main>
+                <h2><article> <b>CodeMeet</b> is a platform created to be used by a Developers group.
+                    If you are a member, or even the Manager that coordinates the development, you will find helpful a tool like CodeMeet : 
+                <br><br>+   Whoever can post a <bold>ticket</bold>, which is a signalation of a problem occuring in a specific project, as it could be an error about networking, an alert about missing permissions or security warning or even a simple bug that happens under certain circumstances. When doing so, the team would appreciate you using more details about the problem - like indicating the exact file and line in which the error occurs.<br>You can also an example, like a stack overflow thread that explains the same problem or explains a possible solution.
+            <br><br>+   As a developer you can solve this tickets that yourself or your coworkers created, posting a comment (also a link, is there is one, of what helped you through the problem solving!) if you feel one should be needed.
+        <!--<br><br>+   As a Manager you could find useful to know which tickets were solved by who : the Ranking page find its purpose here. <br>It useful to monitor your team!--> </article> </h2>
+                <!--
+                <form name='form' method='post'> 
+                <div id=whatpageisit>LOGIN
+                <a href='sign_up.html'>SIGN UP</a></div>
+
+                <p>
+                    <label>Username <input type='text' name='username'></label>
+                </p>
+                <p>
+                    <label>Password <input type='password' name='password'></label>
+                </p>
+                <p>
+                <div id="submit"><label>&nbsp;<input type='submit'></label></div>
+                </p>
+                </form>
+            -->
+            <!--            -->
+                
+            </main>
+        </div>
+    </div>
+    </body>
+</html>

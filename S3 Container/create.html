@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>CodeMeet | Create a ticket</title>
+        <link rel="icon" href="pc1.png">
+        <link rel='stylesheet' href='home.css'/>
+        <link rel='stylesheet' href='create.css'/>
+       <script src='create.js' defer></script>
+    </head>
+    <body>
+        <div id="nav">
+            <div id="banner">
+                <div id="navflex">
+                    <p><img id="banner" src="3logo3.png" /></p>
+                </div>
+            </div>
+        <div id="flex-cont-nav">
+            <div id="navflex">
+            <!--<p><a href='ranking.html'>DEVS</a></p>
+            <p><a> | </a></p> -->
+            <p><a class="here" href='create.html'>CREATE A TICKET</a></p>
+            <p><a> | </a></p> 
+            <p><a href='home.html'>HOMEPAGE</a></p>
+            <p><a> | </a></p> 
+            <p><a href='index.html'>ABOUT</a></p>
+            </div>
+        
+        </div>
+    </div>
+        <main>
+        <section id="create_tab">
+            <!--
+            <div id="description_ticket">Submit your problem here.The title should be short but complete: in few words you should be able to explain most of the error.In the text area explore the problem the further you can, deeving in each aspect will help your teamworkers to understand a possible solution.Also, be sure to select the Propriety : If there is too much work flow, your teamworkers will prioritize what is more needed.</div>
+            -->
+            <form name='form'><!--id="create_form"-->
+                <div id="whatpageisit_create" >CREATE A TICKET</div>
+                
+                
+                <p> <label>Title <input id = "larger_title" type='text' maxlenght="100" name='ticket_title' value=''></label> </p>
+                <p> <label> <textarea id = "larger_text" maxlenght="500" type='text' name='ticket_text' value=''></textarea></label> </p>
+                <p> <label>Submitted by :  <input id="larger_submitted" type='text' name='submitted_by' value=''></label> </p>
+                <div id="priority_radio">   
+                    <input type="radio" id="HIGH" name="priority" value="HIGH"><label for="HIGH">High Priority</label><br>
+                    <input type="radio" id="LOW" name="priority" value="LOW"><label for="LOW">Low Priority</label><br>  
+                </div>
+                              
+                <p> <div id="submit"><label>&nbsp;<input type='submit'></label></div> </p>
+            </form>
+            
+        </section>
+    </main>
+    
+    </body>
+</html>
+
